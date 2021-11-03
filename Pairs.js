@@ -16,4 +16,20 @@ function pairs(str) {
   return arr2;
 }
 
-pairs("abcdef");
+const case1Result = pairs("abc");
+const case2Result = pairs("abcdef");
+
+if (!Array.isArray(case1Result) || case1Result.join("|") !== "ab|c_") {
+  console.log(
+    "pairs('abc') should return ['ab','c_'] but did not. Please fix the pairs function."
+  );
+} else if (
+  !Array.isArray(case2Result) ||
+  case2Result.join("|") !== "ab|cd|ef"
+) {
+  console.log(
+    "pairs('abcdef') should return ['ab','cd', 'ef'] but did not. Please fix the pairs function."
+  );
+} else {
+  console.log("Success!");
+}
