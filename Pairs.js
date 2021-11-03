@@ -5,7 +5,6 @@ function pairs(str) {
   if (len % 2 !== 0) {
     arr.push("_");
   }
-  console.log(arr.length);
   for (let i = 0; i <= arr.length; i++) {
     let st = arr[i] + arr[i + 1];
     if (st) {
